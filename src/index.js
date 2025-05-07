@@ -15,6 +15,10 @@ const bookingsRouter = require("./routes/bookings");
 app.use("/api/auth", authRouter);
 app.use("/api/activities", activitiesRouter);
 app.use("/api/bookings", bookingsRouter);
+app.get('/', (req, res)=>{
+  res.send("Welcome to Activity Booking APP");
+})
+
 
 connectDB()
   .then(() => {
